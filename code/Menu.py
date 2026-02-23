@@ -15,3 +15,4 @@ class Menu:
         pygame.display.flip()
 
         pass
+
