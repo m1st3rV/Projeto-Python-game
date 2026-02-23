@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
+import os.path
 
 import pygame.image
 
@@ -7,7 +8,7 @@ import pygame.image
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load('./asset/nature_2/orig.png')
+        self.surf = pygame.image.load(os.path.join('./asset/nature_2/orig.png'))
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
@@ -15,4 +16,3 @@ class Menu:
         pygame.display.flip()
 
         pass
-
