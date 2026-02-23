@@ -1,6 +1,8 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 import pygame
+import sys
+import os
 
 from code.Menu import Menu
 
