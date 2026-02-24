@@ -16,15 +16,15 @@ class Menu:
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
-#       pygame.mixer_music.load('./asset/arquivo_de_musica')    #EDITE O CAMINHO PARA SELECIONAR O ARQUIVO DESEJADO
-#       pygame.mixer_music.play(-1)
+        pygame.mixer_music.load('./asset/music/843679.wav')    #EDITE O CAMINHO PARA SELECIONAR O ARQUIVO DESEJADO
+        pygame.mixer_music.play(-1)
 # DESCOMENTAR AS LINHAS ACIMA AO INFORMAR O ARQUIVO DE SOM
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
-            self.menu_text(text_size=50, text="Welcome to Vinland", text_color=(COLOR_BLACK), text_center_position=((WIN_WIDTH / 2), 70))
+            self.menu_text(text_size=50, text="Welcome to Vinland", text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 70))
 
             for i in range(len(MENU_OPTION)):
-                self.menu_text( text_size=30, text=(MENU_OPTION[i]), text_color=(COLOR_BLACK), text_center_position=((WIN_WIDTH / 2), 150 + 20 * i))
+                self.menu_text( text_size=30, text=(MENU_OPTION[i]), text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), (WIN_HEIGHT / 2) + 30 * i ))
 
             pygame.display.flip()
 
