@@ -6,7 +6,7 @@ import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
 
-from code.Const import WIN_WIDTH, WIN_HEIGHT, COLOR_BLACK, MENU_OPTION, COLOR_WHITE
+from code.Const import WIN_WIDTH, WIN_HEIGHT, COLOR_BLACK, MENU_OPTION1, MENU_OPTION2, MENU_OPTION3, COLOR_WHITE
 
 
 class Menu:
@@ -23,8 +23,10 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(text_size=50, text="Welcome to Vinland", text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 70))
 
-            for i in range(len(MENU_OPTION)):
-                self.menu_text( text_size=30, text=(MENU_OPTION[i]), text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), (WIN_HEIGHT / 2) + 30 * i ))
+            self.menu_text( text_size=30, text=MENU_OPTION1, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 140 ))
+            self.menu_text( text_size=30, text=MENU_OPTION2, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 170 ))
+            self.menu_text( text_size=30, text=MENU_OPTION3, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 200 ))
+
 
             pygame.display.flip()
 

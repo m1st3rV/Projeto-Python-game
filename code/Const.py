@@ -5,9 +5,9 @@ COLOR_WHITE = (255, 255, 255)
 
 #M
 
-MENU_OPTION = ('NEW GAME',
-               'CONTINUE'
-               'EXIT')
+MENU_OPTION1 = 'NEW GAME'
+MENU_OPTION2 = 'CONTINUE'
+MENU_OPTION3 = 'EXIT'
 
 #W
 
