@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 import pygame
 
-from code.Const import WIN_WIDTH, WIN_HEIGHT
+from code.Const import WIN_WIDTH, WIN_HEIGHT  #CASO NÃO QUEIRA INFORMAR DIMENSÕES POR UM ARQUIVO ESPECÍFICO APAGAR ESSA LINHA
 from code.Menu import Menu
 
 class Game:
@@ -11,8 +11,6 @@ class Game:
         self.window = pygame.display.set_mode(size=(WIN_WIDTH,WIN_HEIGHT))
     
     def run(self):
-
-
         while True:
             menu = Menu(self.window)
             menu.run()
