@@ -5,8 +5,8 @@ import os.path
 import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
-
-from code.Const import WIN_WIDTH, WIN_HEIGHT, COLOR_BLACK, MENU_OPTION1, MENU_OPTION2, MENU_OPTION3, COLOR_WHITE
+from code.Const import WIN_WIDTH, WIN_HEIGHT,COLOR_BLACK, COLOR_WHITE, MENU_OPTION
+#MENU_OPTION1, MENU_OPTION2, MENU_OPTION3
 
 
 class Menu:
@@ -14,19 +14,25 @@ class Menu:
         self.window = window
         self.surf = pygame.image.load(os.path.join('./asset/nature_2/orig.png'))
         self.rect = self.surf.get_rect(left=0, top=0)
+        self.menu_option = 0
 
     def run(self, ):
         pygame.mixer_music.load('./asset/music/843679.wav')    #EDITE O CAMINHO PARA SELECIONAR O ARQUIVO DESEJADO
         pygame.mixer_music.play(-1)
-# DESCOMENTAR AS LINHAS ACIMA AO INFORMAR O ARQUIVO DE SOM
+
         while True:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(text_size=50, text="Welcome to Vinland", text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 70))
 
-            self.menu_text( text_size=30, text=MENU_OPTION1, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 140 ))
-            self.menu_text( text_size=30, text=MENU_OPTION2, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 170 ))
-            self.menu_text( text_size=30, text=MENU_OPTION3, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 200 ))
+#            self.menu_text( text_size=30, text=MENU_OPTION1, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 140 ))
+#            self.menu_text( text_size=30, text=MENU_OPTION2, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 170 ))
+#            self.menu_text( text_size=30, text=MENU_OPTION3, text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 200 ))
 
+            for i in range(len(MENU_OPTION)):
+                if i == self.menu_option:
+                    self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, text_center_position=((WIN_WIDTH / 2), 200 + i * 50))
+                else:
+                    self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, text_center_position = ((WIN_WIDTH / 2),200 + i * 50))
 
             pygame.display.flip()
 
@@ -35,6 +41,12 @@ class Menu:
                 if event.type == pygame.QUIT:
                     pygame.quit() # CLOSE WINDOW
                     quit() #end pygame
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_DOWN:
+                        if menu_option < len(MENU_OPTION) - 1:
+                            menu_option +=1
+                        else:
+                            menu_option = 0
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_position: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
