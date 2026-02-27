@@ -21,6 +21,7 @@ class Menu:
         pygame.mixer_music.play(-1)
 
         while True:
+            #DRAW IMAGES
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(text_size=50, text="Welcome to Vinland", text_color=COLOR_BLACK, text_center_position=((WIN_WIDTH / 2), 70))
 
@@ -34,7 +35,7 @@ class Menu:
                 else:
                     self.menu_text(30, MENU_OPTION[i], COLOR_BLACK, text_center_position = ((WIN_WIDTH / 2),200 + i * 50))
 
-
+            pygame.display.flip()
 
         # CHECK FOR EVENTS
             for event in pygame.event.get():
@@ -52,8 +53,11 @@ class Menu:
                             self.menu_option -=1
                         else:
                            self.menu_option = len(MENU_OPTION) - 1
+                    if event.key == pygame.K_RETURN: #return
+                        return MENU_OPTION[self.menu_option]
 
-            pygame.display.flip()
+
+
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_position: tuple):
         text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
