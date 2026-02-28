@@ -1,9 +1,12 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-import pygame
 
-from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION  #CASO NÃO QUEIRA INFORMAR DIMENSÕES POR UM ARQUIVO ESPECÍFICO APAGAR ESSA LINHA
+import pygame
+from code.Level import Level
+from code.Const import WIN_WIDTH, WIN_HEIGHT, \
+    MENU_OPTION  # CASO NÃO QUEIRA INFORMAR DIMENSÕES POR UM ARQUIVO ESPECÍFICO APAGAR ESSA LINHA
 from code.Menu import Menu
+
 
 class Game:
     def __init__(self):
@@ -15,9 +18,10 @@ class Game:
             menu = Menu(self.window)
             menu_return = menu.run()
 
-            if menu_return == MENU_OPTION[0]:  # MENU OPTION NEW GAME
-                pass
-            elif menu_return == MENU_OPTION[2]:  # MENU OPTION EXIT
+            if menu_return in [MENU_OPTION[0], MENU_OPTION[1], MENU_OPTION[2]]:  # MENU OPTION NEW GAME
+                level = Level(self.window, 'Level 1', menu_return)
+                level_return = level.run()
+            elif menu_return == MENU_OPTION[4]:  # MENU OPTION EXIT
                 pygame.quit()
                 quit() #END PYGAME
             else:

@@ -31,9 +31,9 @@ class Menu:
 
             for i in range(len(MENU_OPTION)):
                 if i == self.menu_option:
-                    self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, text_center_position=((WIN_WIDTH / 2), 200 + i * 50))
+                    self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, text_center_position=((WIN_WIDTH / 2), 150 + i * 40))
                 else:
-                    self.menu_text(30, MENU_OPTION[i], COLOR_BLACK, text_center_position = ((WIN_WIDTH / 2),200 + i * 50))
+                    self.menu_text(30, MENU_OPTION[i], COLOR_BLACK, text_center_position = ((WIN_WIDTH / 2),150 + i * 40))
 
             pygame.display.flip()
 
