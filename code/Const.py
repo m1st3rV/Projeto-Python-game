@@ -11,13 +11,29 @@ ENTITY_SPEED = {'nature_1_0': 0,
                 'nature_1_2': 1,
                 'nature_1_3': 2,
                 'nature_1_4': 3,
-                'nature_1_5': 5,
-                'nature_1_6': 5,
-                'nature_1_7': 4,
+                'nature_1_5': 4,
+                'nature_1_6': 4,
+                'nature_1_7': 3,
                 'Player': 3,
                 'Enemy1': 2,
                 'Enemy2': 1}
 
+ENTITY_HEALTH = {
+                'nature_1_0': 999,
+                'nature_1_1': 999,
+                'nature_1_2': 999,
+                'nature_1_3': 999,
+                'nature_1_4': 999,
+                'nature_1_5': 999,
+                'nature_1_6': 999,
+                'nature_1_7': 999,
+                'Player': 500,
+                'Enemy1': 100,
+}
+
+
+
+#H
 
 
 #M
