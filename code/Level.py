@@ -29,7 +29,7 @@ class Level:
 
 
 
-    def run(self, ):
+    def run(self):
         pygame.mixer_music.load(os.path.join('./asset/music/843679.wav'))
         pygame.mixer_music.play(-1)
         clock = pygame.time.Clock()
@@ -43,7 +43,7 @@ class Level:
                     if shoot is not None:
                         self.entity_list.append(shoot)
                 if ent.name == 'Player':
-                    self.level_text(14, f'Player Health: {ent.health} | Score: {ent.score}', (50, 40), (255, 0, 0))
+                    self.level_text(14, f'Player Health: {ent.health} | Score: {ent.score}', (50, 40), COLOR_WHITE)
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     pygame.quit()
@@ -58,7 +58,7 @@ class Level:
             pygame.display.flip()
             EntityMediator.verify_collision(entity_list=self.entity_list)
             EntityMediator.verify_health(entity_list=self.entity_list)
-        pass
+
 
     def level_text(self, text_size: int, text: str, position: tuple, color: tuple):
         text_font: Font = pygame.font.SysFont('Times New Roman', size=text_size)

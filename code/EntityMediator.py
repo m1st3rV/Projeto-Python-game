@@ -1,4 +1,4 @@
-from code.Const import WIN_WIDTH
+from code.Const import WIN_WIDTH, ENTITY_SCORE
 from code.Enemy import Enemy
 from code.EnemyShot import EnemyShot
 from code.Entity import Entity
@@ -22,12 +22,12 @@ class EntityMediator:
         pass
 
     @staticmethod
-    def __give_score(enemy: Enemy,entity_list: list[Entity]):
+    def __give_score(enemy: Enemy, entity_list: list[Entity]):
         if enemy.last_dmg == 'PlayerShot':
             for ent in entity_list:
                 if ent.name == 'Player':
                     ent.score += enemy.score
-        pass
+
 
     @staticmethod
     def __verify_collision_entity(ent1, ent2):
