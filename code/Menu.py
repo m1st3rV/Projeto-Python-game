@@ -1,11 +1,11 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 import os.path
-
 import pygame.image
 from pygame import Surface, Rect
 from pygame.font import Font
-from code.Const import WIN_WIDTH,COLOR_BLACK, COLOR_WHITE, MENU_OPTION
+from code.Const import WIN_WIDTH,COLOR_BLACK, COLOR_WHITE, MENU_OPTION, CONTROL_DESCRIPTION, WIN_HEIGHT
+
 
 
 class Menu:
@@ -33,6 +33,10 @@ class Menu:
                     self.menu_text(30, MENU_OPTION[i], COLOR_WHITE, text_center_position=((WIN_WIDTH / 2), 150 + i * 40))
                 else:
                     self.menu_text(30, MENU_OPTION[i], COLOR_BLACK, text_center_position = ((WIN_WIDTH / 2),150 + i * 40))
+
+            for i, control in enumerate(CONTROL_DESCRIPTION):
+                self.menu_text(15, control, COLOR_BLACK,
+                               text_center_position=(40, WIN_HEIGHT - 80 + i * 15))
 
             pygame.display.flip()
 
