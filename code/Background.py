@@ -11,3 +11,4 @@ class Background(Entity):
         self.rect.centerx -= ENTITY_SPEED[self.name]
         if self.rect.right <=0:
             self.rect.left = WIN_WIDTH
+

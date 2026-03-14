@@ -1,16 +1,12 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
-import sys
-
 import pygame
-from pygame import event
 
 from code.Level import Level
 from code.Const import WIN_WIDTH, WIN_HEIGHT, \
     MENU_OPTION
 from code.Menu import Menu
 from code.Score import Score
-
 
 class Game:
     def __init__(self):

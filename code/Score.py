@@ -1,15 +1,11 @@
 import datetime
 from datetime import datetime
 import sys
-from os import name
-
 import pygame
 import os
-
 from pygame import Surface, Rect
 from pygame.font import Font
-
-from code.Const import COLOR_GREEN_LIME, WIN_WIDTH, COLOR_BLACK, MENU_OPTION
+from code.Const import COLOR_GREEN_LIME, WIN_WIDTH, MENU_OPTION
 from code.DBProxy import DBProxy
 
 
@@ -20,8 +16,6 @@ class Score:
         self.surf = pygame.image.load(os.path.join('./asset/nature_6/orig.png')).convert_alpha()
         self.rect = self.surf.get_rect(left=0, top=0)
         self.menu_option = 0
-
-
 
     def save(self, game_mode: str, player_score: list[int]):
         pygame.mixer_music.load('./asset/music/level1.wav')  # FILE PATH
@@ -68,10 +62,6 @@ class Score:
             pygame.display.flip()
             pass
 
-
-
-
-
     def show(self):
         pygame.mixer_music.load('./asset/music/level1.wav')  # FILE PATH
         pygame.mixer_music.play(-1)
@@ -94,8 +84,6 @@ class Score:
                     if event.key == pygame.K_ESCAPE:
                         return
             pygame.display.flip()
-
-
 
 
     def score_text(self, text_size: int, text: str, text_color: tuple, text_center_position: tuple):

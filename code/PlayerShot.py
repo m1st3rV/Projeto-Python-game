@@ -1,6 +1,7 @@
 from code.Const import ENTITY_SPEED
 from code.Entity import Entity
 
+#creating shots from players
 class PlayerShot(Entity):
     def __init__(self, name:str, position:tuple):
         super().__init__(name, position)

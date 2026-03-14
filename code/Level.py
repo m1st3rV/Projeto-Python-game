@@ -4,15 +4,11 @@
 import os
 import sys
 from pygame.font import Font
-
 import pygame
-from pygame import Surface, Rect, Event
-from pygame.mixer import music
-
-from code.PlayerShot import PlayerShot
+from pygame import Surface, Rect
 from code.Enemy import Enemy
 from code.EntityMediator import EntityMediator
-from code.Const import COLOR_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, SPAWN_TIME, COLOR_RED, EVENT_TIMEOUT, \
+from code.Const import COLOR_WHITE, EVENT_ENEMY, SPAWN_TIME, COLOR_RED, EVENT_TIMEOUT, \
     TIMEOUT_TIME, TIMEOUT_TAX, LEVEL_CONFIG
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory

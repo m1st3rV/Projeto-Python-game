@@ -1,9 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from os import name
-
 import pygame
-
 from code.Const import ENTITY_SPEED, WIN_HEIGHT, WIN_WIDTH, ENTITY_SHOT_DELAY, JUMP_FORCE, GRAVITY
 from code.Entity import Entity
 from code.PlayerShot import PlayerShot
