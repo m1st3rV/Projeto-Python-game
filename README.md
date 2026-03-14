@@ -46,11 +46,7 @@
    python main.py
    ```
 
-### Ou execute diretamente pelo `.exe`
 
-Caso prefira não instalar Python, baixe o executável na seção [Releases](https://github.com/seu-usuario/vinland-rush/releases) e execute o arquivo `VinlandRush.exe`.
-
----
 
 ## 🎮 Como jogar
 
