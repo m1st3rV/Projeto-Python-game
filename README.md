@@ -61,8 +61,7 @@ Caso prefira não instalar Python, baixe o executável na seção [Releases](htt
 | `ESC` | Pausar / Sair |
 
 - Desvie dos obstáculos para continuar vivo
-- Quanto mais inimigos matar, maior a pontuação
--               boa sorte!
+- Quanto mais inimigos matar, maior a pontuação. Boa sorte!
 
 ---
 
